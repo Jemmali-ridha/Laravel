@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-calendar-alt"></i>
+                <span>EventManager</span>
+            </div>
+            <div class="nav-links">
+                <button id="addEventBtn" class="nav-btn">
+                    <i class="fas fa-plus"></i> New Event
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <main>
+            <section id="eventFormSection" class="event-form hidden">
+                <div class="form-header">
+                    <h2><i class="fas fa-plus-circle"></i> Add New Event</h2>
+                    <button id="closeForm" class="close-btn"><i class="fas fa-times"></i></button>
+                </div>
+                <form id="eventForm" action="php/save_event.php" method="POST">
+                    <div class="form-group">
+                        <label for="eventName">
+                            <i class="fas fa-heading"></i> Event Name
+                        </label>
+                        <input type="text" id="eventName" name="eventName" required 
+                               placeholder="Enter event name">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="eventDate">
+                                <i class="fas fa-calendar"></i> Date
+                            </label>
+                            <input type="date" id="eventDate" name="eventDate" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="eventTime">
+                                <i class="fas fa-clock"></i> Time
+                            </label>
+                            <input type="time" id="eventTime" name="eventTime" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="eventLocation">
+                            <i class="fas fa-map-marker-alt"></i> Location
+                        </label>
+                        <input type="text" id="eventLocation" name="eventLocation" required
+                               placeholder="Enter event location">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="eventDescription">
+                            <i class="fas fa-align-left"></i> Description
+                        </label>
+                        <textarea id="eventDescription" name="eventDescription" rows="4"
+                                  placeholder="Enter event description"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-save"></i> Save Event
+                    </button>
+                </form>
+            </section>
+
+            <section class="event-list">
+                <div class="section-header">
+                    <h2><i class="fas fa-calendar-check"></i> Upcoming Events</h2>
+                    <div class="view-controls">
+                        <button class="view-btn active" data-view="grid">
+                            <i class="fas fa-th-large"></i>
+                        </button>
+                        <button class="view-btn" data-view="list">
+                            <i class="fas fa-list"></i>
+                        </button>
+                    </div>
+                </div>
+                <div id="eventsList" class="events-grid">
+                    <!-- Events will be loaded here dynamically -->
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
