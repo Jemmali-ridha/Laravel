@@ -27,22 +27,47 @@
         </div>
     </nav>
 
-    <div class="chat-container">
-        <div class="chat-header">
-            <h2><i class="fas fa-robot"></i>Cha9a9a AI Assistant</h2>
+    <div class="main-container">
+        <div class="collections-section">
+            <h2><i class="fas fa-hand-holding-heart"></i> Mes Collectes</h2>
+            <div class="collections-table-wrapper">
+                <table class="collections-table">
+                    <thead>
+                        <tr>
+                            <th>Titre</th>
+                            <th>Objectif</th>
+                            <th>Montant collecté</th>
+                            <th>Donateurs</th>
+                            <th>Statut</th>
+                            <th>Temps restant</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="collectionsTableBody">
+                        <!-- Table content will be dynamically populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+            <button class="add-collection-btn"><i class="fas fa-plus"></i> Créer une nouvelle collecte</button>
         </div>
-        <div class="chat-messages" id="chatMessages">
-            <div class="message bot">
-                <div class="message-content">
-                    Hello! How can I help you today?
+
+        <div class="chat-container">
+            <div class="chat-header">
+                <h2><i class="fas fa-robot"></i> Assistant Cha9a9a</h2>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot">
+                    <div class="message-content">
+                        Bonjour! Comment puis-je vous aider avec vos collectes aujourd'hui?
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="chat-input">
-            <input type="text" id="userInput" placeholder="Type your message here...">
-            <button id="sendButton">
-                <i class="fas fa-paper-plane"></i>
-            </button>
+            <div class="chat-input">
+                <input type="text" id="userInput" placeholder="Posez votre question ici...">
+                <button id="sendButton">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
         </div>
     </div>
 

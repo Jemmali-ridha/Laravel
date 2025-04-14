@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails de la collecte - Cha9a9a.tn</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-left">
+                <a href="index.html" class="logo">Cha9a9a.tn</a>
+                <div class="nav-links">
+                    <a href="index.html">Retour aux collectes</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="collection-details-container">
+        <div class="collection-header">
+            <h1 id="collectionTitle">Chargement...</h1>
+            <span class="status-badge" id="collectionStatus">En cours</span>
+        </div>
+
+        <div class="collection-info-grid">
+            <!-- Informations principales -->
+            <div class="info-card">
+                <h2>Informations générales</h2>
+                <div class="info-content">
+                    <div class="info-row">
+                        <span class="label">Créée par:</span>
+                        <span class="value" id="collectionCreator">Association XYZ</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Date de création:</span>
+                        <span class="value" id="collectionDate">15 Mars 2025</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Date de fin:</span>
+                        <span class="value" id="collectionEndDate">30 Avril 2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progression -->
+            <div class="info-card">
+                <h2>Progression</h2>
+                <div class="progress-stats">
+                    <div class="stat-row">
+                        <div class="stat">
+                            <span class="stat-value" id="collectionTarget">10,000 DT</span>
+                            <span class="stat-label">Objectif</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value" id="collectionCurrent">5,230 DT</span>
+                            <span class="stat-label">Collecté</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value" id="collectionPercentage">52%</span>
+                            <span class="stat-label">Progression</span>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" id="progressBar" style="width: 52%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <div class="info-card full-width">
+                <h2>Description</h2>
+                <div class="description-content" id="collectionDescription">
+                    <p>Chargement de la description...</p>
+                </div>
+            </div>
+
+            <!-- Derniers dons -->
+            <div class="info-card">
+                <h2>Derniers dons</h2>
+                <div class="donations-list" id="recentDonations">
+                    <div class="donation-item">
+                        <div class="donor-info">
+                            <i class="fas fa-user-circle"></i>
+                            <span class="donor-name">Ahmed B.</span>
+                        </div>
+                        <span class="donation-amount">500 DT</span>
+                        <span class="donation-date">Il y a 2 heures</span>
+                    </div>
+                    <div class="donation-item">
+                        <div class="donor-info">
+                            <i class="fas fa-user-circle"></i>
+                            <span class="donor-name">Sarah M.</span>
+                        </div>
+                        <span class="donation-amount">200 DT</span>
+                        <span class="donation-date">Il y a 5 heures</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Statistiques -->
+            <div class="info-card">
+                <h2>Statistiques</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <i class="fas fa-users"></i>
+                        <span class="stat-value" id="donorsCount">45</span>
+                        <span class="stat-label">Donateurs</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <span class="stat-value" id="avgDonation">250 DT</span>
+                        <span class="stat-label">Don moyen</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-clock"></i>
+                        <span class="stat-value" id="daysLeft">15</span>
+                        <span class="stat-label">Jours restants</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
